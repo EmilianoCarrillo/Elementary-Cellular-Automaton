@@ -1,0 +1,33 @@
+{
+  "name": "ElementaryCellularAutomaton",
+  "productName": "ElementaryCellularAutomaton",
+  "description": "An app to experiment with a one dimensional cellular automata.",
+  "author": "Emiliano Carrillo Moncayo <EmilianoCarrilloMoncayo@gmail.com>",
+  "version": "0.1.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ElementaryCellularAutomaton\"",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/ElementaryCellularAutomaton-darwin-x64/ElementaryCellularAutomaton.app ElementaryCellularAutomaton --out=installers/mac --overwrite --icon=icons/mac/icon.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js"
+  },
+  "build": {
+    "appID": "com.ElementaryCellularAutomaton.app",
+    "mac": {
+      "category": "public.app-category.education"
+    }
+  },
+  "devDependencies": {
+    "asar": "^0.13.0",
+    "electron": "^1.4.3",
+    "electron-installer-dmg": "^0.2.1",
+    "electron-packager": "^8.6.0",
+    "electron-winstaller": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emiliano-carrillo/Elementary-Cellular-Automata"
+  }
+}

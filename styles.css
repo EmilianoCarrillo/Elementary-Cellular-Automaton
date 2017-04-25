@@ -1,0 +1,222 @@
+/*
+MIT License
+Copyright (c) 2017 Emiliano Carrillo Moncayo
+https://github.com/emiliano-carrillo/Elementary-Cellular-Automata
+*/
+
+/*  FONTS */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Black.ttf');
+    font-weight: 900;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/Raleway-Bold.ttf');
+    font-weight: 700;
+}
+
+body {margin: 0; padding: 0;}
+
+/* -- SPLASHSCREEN -- */
+#SplashScreen
+{
+  background-color: #3498db;
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+h1
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 80%;
+  text-align: center;
+  color: white;
+}
+
+h3
+{
+  font-family: 'Raleway', sans-serif;
+  color: #34495e;
+}
+
+#SplashScreenText
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#StartButton
+{
+  -webkit-transition-duration: 0.4s;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+
+  padding: 8px;
+  margin-top: 20px;
+  width: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#StartButton:hover
+{
+   -webkit-transition-duration: 0.4s;
+    background-color: white;
+    color: #3498db;
+}
+
+/* -- LOADER -- */
+#Loader
+{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #2D3E50;
+  position: fixed;
+}
+.loader {
+    border: 16px solid #34495e;
+    border-top: 16px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite;
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* -- CELL AUTOMATA WINDOW -- */
+#ControlPanel
+{
+  background-color: #34495e;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  min-height: 150px;
+  display: none;
+  min-width: 775px;
+}
+
+#ControlPanel h4
+{
+  font-family: 'Raleway', sans-serif;
+  padding: 0px;
+  margin: 10px 10px 0px 20px;
+}
+
+#ControlPanel div
+{
+  height: 100%;
+  width: 33%;
+  color: white;
+  float: left;
+  padding-bottom: 20px;
+  padding-top:10px
+}
+
+#txtInputs input
+{
+  width: 200px;
+  margin: 0px 10px 0px 20px;
+  background-color: #2D3E50;
+  border-radius: 8px;
+  border-color: transparent;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  padding: 0px 10px 0px 10px;
+}
+
+#txtInputs input:focus{outline: none;}
+
+#btnInputs button, #otherInputs button
+{
+  width: 80%;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #158f76;
+  border: 2px solid #158f76;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  max-width: 350px;
+}
+
+#btnInputs button:hover, #otherInputs button:hover
+{
+  background-color: #158f76;
+  color: #34495e;
+}
+
+#btnInputs button:active , #otherInputs button:active
+{
+  background-color: #158f76;
+  color: #34495e;
+  border-color: #34495e;
+  outline: none;
+}
+
+#btnInputs button:focus, #otherInputs button:focus{outline: none}
+
+#btnInputs button:first-child
+{
+  margin-top: 18px;
+  color: white;
+  background-color: #1BBC9B;
+  border: none;
+}
+
+#btnInputs button:first-child:hover
+{
+  background-color: white;
+  color: #34495e;
+}
+
+#btnInputs button:first-child:active
+{
+  background-color: #efefef;
+}
+
+
+#otherInputs button:first-child
+{
+  margin-top: 20px;
+}
+
+#aliveColor {margin-top: 10px;}
