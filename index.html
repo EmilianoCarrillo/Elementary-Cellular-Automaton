@@ -1,0 +1,71 @@
+<!--
+MIT License
+Copyright (c) 2017 Emiliano Carrillo Moncayo
+https://github.com/emiliano-carrillo/Elementary-Cellular-Automata
+-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Elementary Cellular Automaton</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+      //So that I can Use JQuery's $
+      try {
+        $ = jQuery = module.exports;
+      } catch(e) {}
+    </script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="p5.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="SplashScreen">
+      <div id="SplashScreenText">
+        <h1>ELEMENTARY CELLULAR AUTOMATON</h1>
+        <center><h3>Copyright (c) 2017 Emiliano Carrillo Moncayo.</h3></center>
+        <button id="StartButton" onclick="hideSplashScreen()">LET'S START</button>
+      </div>
+    </div>
+
+    <div id="Loader">
+      <div class="loader"></div>
+    </div>
+
+    <div id="ControlPanel">
+      <div id="txtInputs">
+        <h4>Ruleset:</h4><input type="number" id="rulesetIn" value="110"><br>
+        <h4>Cells per generation:</h4><input type="number" id="cellNumIn" value="100"><br>
+        <h4>Ending generation:</h4><input type="number" id="finalGenIn" value="200"><br>
+      </div>
+      <div id="otherInputs">
+        <center>
+        <button id="randomize">RANDOMIZE</button>
+        <button id="oneInTheMiddle">ONE IN THE MIDDLE</button>
+        <h4 id="borderTxt">Border: <input id="checkBorder" type="checkbox"></h4>
+        </center>
+      </div>
+      <div id="btnInputs">
+        <center>
+        <button id="startBtn">START</button>
+        <button id="resetBtn">RESET</button><br/>
+        <input type="color" id="aliveColor" value="#3498db">
+        <input type="color" id="deadColor" value="#FFFFFF">
+        </center>
+      </div>
+    </div>
+
+  </body>
+  <script src="script.js"></script>
+  <script>
+  //RELOAD AND DEV TOOLS COMMAND
+	document.addEventListener(" keydown", function (e) {
+		if (e.which === 82) {
+			location.reload();
+		}
+	});
+</script>
+</html>
