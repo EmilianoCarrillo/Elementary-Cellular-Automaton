@@ -1,4 +1,7 @@
 # Elementary Cellular Automaton 
+
+![MainPhoto](https://raw.githubusercontent.com/emiliano-carrillo/Elementary-Cellular-Automaton/master/CellAut.png)
+
 This is the simplest type of cellular automata. It just has one dimension and each cell can be either alive or dead. It was invented by Stephen Wolfram. 
 
 My desktop app uses Javascript and P5 to replicate it and experiment with it. (Available for Windows and Mac).
