@@ -228,7 +228,7 @@ $("#cellNumIn").on("input",function(e){
         timerid = setTimeout(function() {
           //Change the Cells Per Generation and the print them
           drawFirstGen(true);
-        },800);
+        },2000);
     };
 });
 
